@@ -16,12 +16,12 @@
         {
             const uname = document.getElementById("username");
             const email = document.getElementById("email");
-            let uname_regex = /^(?=.*[a-z])(?=.*[A-Z])$/
+            let uname_regex = /^[a-zA-Z0-9_]{6,20}
             let regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
 
             if(!uname_regex.test(uname))
             {
-                alert("user")
+                alert("username should be atleast 6 letters")
             }
                 if (!regex.test(email)) {
                 alert("Email should be of the form - host@domain.tld");
