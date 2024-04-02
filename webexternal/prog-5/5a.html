@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validateform()">
+        <h2>Login</h2>
+        <input type="text" id="username"><br><br>
+        <input type="password" id="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateform()
+        {
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+            if (username.length < 6) 
+            {
+                alert("Username must be of minimum six characters!!!");
+                return false;
+            }
+            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if(!regex.test(password))
+            {
+                alert("invalid password");
+                return false;
+            }
+            else
+            {
+                alert("success");
+                return true
+            }
+        }
+    </script>
+</body>
+</html>

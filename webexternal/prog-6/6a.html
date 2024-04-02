@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+</head>
+<body>
+    <form action="" onsubmit="return validateform()">
+        <input type="text" name="username" id="username"><br>
+        <input type="email" name="email" id="email">
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function validateform()
+        {
+            const uname = document.getElementById("username");
+            const email = document.getElementById("email");
+            let uname_regex = /^(?=.*[a-z])(?=.*[A-Z])$/
+            let regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+
+            if(!uname_regex.test(uname))
+            {
+                alert("user")
+            }
+                if (!regex.test(email)) {
+                alert("Email should be of the form - host@domain.tld");
+                return false;
+            } else {
+                alert("Successfully Submited");
+                return true;
+            }
+                    }
+    </script>
+</body>
+</html>

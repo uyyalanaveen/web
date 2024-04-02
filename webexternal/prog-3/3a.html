@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change background</title>
+</head>
+<body>
+
+  <input type="radio" name="color" id="red" value="red" required> red
+  <input type="radio" name="color" id="green" value="green" required> green
+  <input type="radio" name="color" id="blue" value="blue" required>blue
+  <button onclick="changeBackgroundColor()">Change Color</button>
+
+  <script>
+
+    function changeBackgroundColor() 
+    {
+      color = document.querySelector("input[name='color']:checked").value;
+      document.body.style.backgroundColor = color;
+    }
+
+  </script>
+</body>
+</html>

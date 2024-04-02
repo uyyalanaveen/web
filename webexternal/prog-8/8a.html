@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>six a</title>
+</head>
+<body>
+  <form action="" onsubmit="return validateForm()">
+    <label for="gender">Gender: </label>
+    <input type="radio" name="gender" id="male" > Male
+    <input type="radio" name="gender" id="female" > Female
+    <br>
+    <label for="hobby">Favourite Hobby: </label>
+    <select name="hobby" id="hobby" required>
+      <option value="---">---</option>
+      <option value="cricket">Cricket</option>
+      <option value="music">Music</option>
+      <option value="Chess">Chess</option>
+    </select>
+    <br>
+    <input type="submit">
+  </form>
+  <script>
+    
+        function validateForm() 
+        {
+            const male = document.getElementById("male");
+            const female = document.getElementById("female");
+            if (!(male.checked || female.checked)) {
+                alert("Please select your gender!!!");
+                return false;
+            }
+            const hobby = document.getElementById("hobby");
+            if (hobby.value === "---") {
+                alert("Please select a hobby");
+                return false;
+            }
+            return true;
+        }
+    
+  </script>
+</body>
+</html>

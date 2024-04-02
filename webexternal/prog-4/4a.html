@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="color" name="bgcolor" id="bg" oninput="changebg()">
+    <input type="color" name="fgcolor" id="fg" oninput="changefg()"><br>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A illo, minima at sed quaerat quidem similique natus laborum asperiores recusandae accusantium. Quasi assumenda labore, alias fugiat reiciendis vero at incidunt?</p>
+    <script>
+        function changebg()
+        {
+            let bg = document.getElementById("bg").value;
+            document.body.style.backgroundColor = bg;
+        }
+        function changefg()
+        {
+            let fg = document.getElementById("fg").value;
+            document.body.style.color = fg;
+        }
+    </script>
+</body>
+</html>
